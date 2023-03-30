@@ -154,15 +154,15 @@ const auto heliView = scene->m_Registry.view<TransformComponent, HeliComponent>(
 const auto crateView = scene->m_Registry.view<TransformComponent, CrateComponent>();
 for (const auto entity : crateView) {
   auto&& [transform, crate] = crateView.get<TransformComponent, CrateComponent>(entity);
-  //a simple intersection check
+  const auto ent = Entity{entity, scene};
   constexpr float axisThreshold = 0.5f;
+  //a simple intersection check
   for (const auto heliEntity : heliView) {
     auto&& [heliTransform, heli] = heliView.get<TransformComponent, HeliComponent>(heliEntity);
     if (std::abs(transform.Translation.x - heliTransform.Translation.x) < axisThreshold
         && std::abs(transform.Translation.y + 0.2f - heliTransform.Translation.y) < axisThreshold
         && std::abs(transform.Translation.z - heliTransform.Translation.z) < axisThreshold) {
       heli.CratesTaken += 1;
-      const auto ent = Entity{entity, scene};
       scene->DestroyEntity(ent);
       break;
     }
@@ -171,6 +171,20 @@ for (const auto entity : crateView) {
 ```
 ![Crates](https://cdn.discordapp.com/attachments/1022588581237248060/1088469165813268510/crates.gif)
 
+As you can see the camera is static. The player is going to be wandering around the map a lot so we want to keep 
+the helicopter always in focus. We can just snap the camera to a defined position everytime player move
+but that wouldn't look good. So we can use `OxMath` API and create a simple camera system with smooth damping.
+```cpp
+m_LastCameraPosition = Math::SmoothDamp(m_LastCameraPosition,
+                                        heliTransform.Translation,
+                                        m_TranslationVelocity,
+                                        TranslationDampening,
+                                        10000.0f,
+                                        Timestep::GetDeltaTime());
+cameraTransform.Translation.x = m_LastCameraPosition.x;
+cameraTransform.Translation.z = m_LastCameraPosition.z + 12.0f;
+```
+![SmootCam](https://cdn.discordapp.com/attachments/1022588581237248060/1090994911869943898/smoothcam.gif)
 
 ## UI 
 For creating a game UI we can use `OxUI` api which uses Dear ImGui underneath for drawing and layouts.
@@ -186,6 +200,12 @@ OxUI::Property("Altitude", "%.1f", Heli.Altitude);
 OxUI::EndUI();
 ```
 ![UI](https://cdn.discordapp.com/attachments/1022588581237248060/1087718914886221904/image.png)
+
+Keeping track of collected crates is just as simple as using glyphs as icons in a row:
+```cpp
+ImGui::Text(StringUtils::FromChar8T(ICON_MDI_CUBE));
+```
+![CratesUI](https://cdn.discordapp.com/attachments/1022588581237248060/1090992608567894056/Annotation_2023-03-30_163445.png)
 
 
 # TO BE CONTINUED...
