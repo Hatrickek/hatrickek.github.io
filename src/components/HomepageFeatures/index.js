@@ -1,66 +1,65 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
 
 const ProjectList = [
   {
-    title: 'My Projects',
-    Svg: require('@site/static/img/OXLogo.svg').default,
-    description: (
-      <a href="https://github.com/Hatrickek">
-        Projects I have worked on.
-      </a>
-    ),
-  },
-  {
-    title: 'About me',
-    Svg: require('@site/static/img/OXLogo.svg').default,
+    title: "My Projects",
+    Svg: require("@site/static/img/OXLogo.svg").default,
     description: (
       <p>
-        20 yo graphics and systems programmer.
-        <p>
-          C++ and Rust enjoyer.
-        </p>
+        <a href="https://github.com/Hatrickek">Projects I have worked on.</a>
       </p>
     ),
   },
   {
-    title: 'Contact',
-    Svg: require('@site/static/img/OXLogo.svg').default,
+    title: "About me",
+    Svg: require("@site/static/img/OXLogo.svg").default,
+    description: (
+      <p>
+        20 yo graphics and systems programmer.<br></br>C++ and Rust enjoyer.
+      </p>
+    ),
+  },
+  {
+    title: "Contact",
+    Svg: require("@site/static/img/OXLogo.svg").default,
     description: (
       <div>
-        <p>E-Mail:
-          <a href="mailto:hatrickek@outlook.com" > hatrickek@outlook.com</a>
+        <p>
+          E-Mail:
+          <a href="mailto:hatrickek@outlook.com"> hatrickek@outlook.com</a>
         </p>
-        <p>Discord:
+        <p>
+          Discord:
           <a href="discord.gg"> Hatrickek#8051</a>
         </p>
       </div>
     ),
   },
-  /* {
+  {/* {
     title: 'Oxylus Engine',
     Svg: require('@site/static/img/OXLogo.svg').default,
     description: (
-      <>
+      <p>
         My Vulkan based game engine. Read more about it in my <a href="blog/oxylus-engine-intro">blog. </a>
-      </>
+      </p>
     ),
   },
   {
     title: 'Cyclone Remake',
     Svg: require('@site/static/img/OXLogo.svg').default,
     description: (
-      <>
+      <p>
         Cyclone 1985 Remake I have made in Oxlyus. Read more about the devlogs I have made in my <a href="blog/oxylus-first-game">blog. </a>
-      </>
+      </p>
     ),
-  }, */
+  }, */}
 ];
 
 function Feature({ title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>
