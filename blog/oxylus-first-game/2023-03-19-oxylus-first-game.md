@@ -5,7 +5,7 @@ authors: [Hatrickek]
 tags: [blog]
 ---
 
-# This blog is pretty outdated. While ECS System's still applies the API have evolved quite a lot and there is now Lua scripting as well. I'll just keep this blog as a relic :)
+### This blog is pretty outdated. While ECS System's still applies the API have evolved quite a lot and there is now Lua scripting as well. I'll just keep this blog as a relic :)
 
 For the purpose of testing Oxylus' capabilities and identifying any missing features, I have decided to make a game using the engine. This project will serve as a stress test to see how well the engine can handle complex gameplay scenarios, while also providing an opportunity to showcase its current features. Furthermore, while working on the game, I'll be able to spot any features that are missing or need improvement. This way, I can add them to the engine and make it even better!
 
