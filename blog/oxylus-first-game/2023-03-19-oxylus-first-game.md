@@ -18,7 +18,6 @@ So let us begin...
 ## Project
 
 The project selection panel is the first thing you will see when launching the engine. The top rows displays recent projects that have been opened, and below that are buttons to load or create projects with a file dialog.
-![Project Selector](projects.png)
 
 In Oxylus, a project is simply a YAML file that specifies the project name, starting scene path, and asset directory:
 
@@ -33,10 +32,8 @@ Project:
 
 First of all, we need assets to load for our scene. I found a nice [helicopter model](https://sketchfab.com/3d-models/low-poly-helicopter-5bbed2de9baa4a13a7faa72653b78b64)
 from Sketchfab. To import assets into Oxylus, simply download the asset and drag and drop it into the editor. Oxylus will automatically load all meshes and materials and create parented entities based on the glTF node hierarchy.
-![Scene](scene.png)
 
 To create ground in the game, I used a plane and applied a green material to it. I created the material first, then simply draged and dropped it onto the plane in the editor.
-![Material](Material.gif)
 
 ## Systems
 
@@ -98,8 +95,6 @@ const auto app = new ProjectCyclone(spec);
 app->PushLayer(new ::ProjectCyclone::GameLayer())
     .AddSystem<HotReloadableScenes>("Assets/Scenes/Main.oxscene");
 ```
-
-![HotReloadableScenes](HotReloadableScene.gif)
 
 ## Gameplay
 

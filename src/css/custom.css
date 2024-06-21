@@ -4,17 +4,21 @@
  * work well for content-centric websites.
  */
 
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
-  url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+.noto-sans-display-zort {
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
   font-style: normal;
-  font-display: auto;
+  font-variation-settings:
+    "wdth" 100;
 }
+
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-font-family-base: 'JetBrains Mono';
+  --ifm-font-family-base: 'Noto Sans Display';
   --ifm-color-primary: #ff7b00;
   --ifm-color-primary-dark: #e66f00;
   --ifm-color-primary-darker: #d96900;
@@ -37,4 +41,5 @@
 
 .hero--primary {
   --ifm-hero-background-color: #1b1b1d;
+  --ifm-heading-color: #fff;
 }
