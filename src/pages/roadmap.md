@@ -5,14 +5,23 @@ authors: [Hatrickek]
 tags: [roadmap]
 ---
 
+# Oxylus Engine Roadmap 🎯
+
 ## Graphics Features
 - [x] GPU Culling
 	- [x] Meshlet culling 
 	- [x] Triangle culling
+- [ ] 2D Renderer  
+  - [ ] Bindless Batching 
+  - [ ] 2D Lighting  
+    - [ ] Shadows
+    - [ ] Normal mapping
+  - [ ] 2D Global Illumination
+  - [ ] Orthographic camera
 - [ ] Eye adaptation
 - [ ] Chromatic abbreation and sharpening
 - [ ] Lightmapping support
-	- Importing from https://github.com/Naxela/The_Lightmapper
+  -  [ ] Importing from https://github.com/Naxela/The_Lightmapper
 - [ ] Iraddiance volumes support
 	- [ ] Importing from Blender
 - [x] Use (gltfpack)meshoptimizer
