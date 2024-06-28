@@ -12,7 +12,10 @@ tags: [roadmap]
 	- [x] Meshlet culling 
 	- [x] Triangle culling
 - [ ] 2D Renderer  
-  - [ ] Bindless Batching 
+  - [x] Bindless Batching 
+  - [ ] Animations
+  - [ ] Tilemaps
+  - [ ] Better sheets/atlas support
   - [ ] 2D Lighting  
     - [ ] Shadows
     - [ ] Normal mapping
