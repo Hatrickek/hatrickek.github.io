@@ -13,7 +13,7 @@ tags: [roadmap]
 	- [x] Triangle culling
 - [ ] 2D Renderer  
   - [x] Bindless Batching 
-  - [ ] Animations
+  - [x] Animations
   - [ ] Tilemaps
   - [ ] Better sheets/atlas support
   - [ ] 2D Lighting  
@@ -43,7 +43,9 @@ tags: [roadmap]
 - [ ] https://pixelmischiefblog.wordpress.com/2016/11/25/bokeh-depth-of-field/
 - [ ] vkCmdSetFragmentShadingRateKHR
 - [ ] 3D text
-## General Improvements
+
+## General Features
+- [ ] 2D Physics with Jolt
 - [ ] Proper controller support
 - [ ] Multiviewport system is half cooked
 - [ ] Scene based RenderPipeline is half cooked
