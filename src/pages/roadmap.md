@@ -14,13 +14,13 @@ tags: [roadmap]
 - [ ] 2D Renderer  
   - [x] Bindless Batching 
   - [x] Animations
-  - [ ] Tilemaps
+  - [x] Tilemaps
   - [ ] Better sheets/atlas support
   - [ ] 2D Lighting  
     - [ ] Shadows
     - [ ] Normal mapping
   - [ ] 2D Global Illumination
-  - [ ] Orthographic camera
+  - [x] Orthographic camera
 - [ ] Eye adaptation
 - [ ] Chromatic abbreation and sharpening
 - [ ] Lightmapping support
