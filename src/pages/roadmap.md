@@ -45,7 +45,8 @@ tags: [roadmap]
 - [ ] 3D text
 
 ## General Features
-- [ ] 2D Physics with Jolt
+- [x] 2D Physics with Jolt
+- [ ] Use Jolt's debug renderer interface instead of our own solution
 - [ ] Proper controller support
 - [ ] Multiviewport system is half cooked
 - [ ] Scene based RenderPipeline is half cooked
